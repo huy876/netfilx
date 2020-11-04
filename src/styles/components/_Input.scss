@@ -1,0 +1,49 @@
+.input-cont {
+    margin-bottom: $s2-space;
+}
+
+.input-cont-focused {
+    .input__label {
+        top: 8px;
+        font-size: $s5-size;
+    }
+}
+
+.input-wr {
+    position: relative;
+    height: 50px;
+    border-radius: 3px;
+    background-color: $grey-2;
+}
+
+.input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: $s2-space;
+    z-index: 10;
+    background-color: transparent;
+    position: relative;
+    color: white;
+    font-size: $s3-size;
+    box-sizing: border-box;
+    padding-top: $s2-space;
+}
+
+.input__label {
+    color: $grey-3;
+    position: absolute;
+    top: 18px;
+    left: $s2-space;
+    z-index: 0;
+    transition: 0.1s ease-in-out;
+
+}
+
+.input__error {
+    font-size: $s4-size;
+    color: $yellow-1;
+    margin-top: 8px;
+}
+

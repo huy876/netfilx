@@ -1,0 +1,84 @@
+.sign-wr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sign {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    width: 450px;
+    padding: 68px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    form {
+        width: 100%;
+
+        >p {
+            font-size: $s4-size;
+            color: $grey-3;
+            text-align: center;
+
+            a {
+                color: white;
+                font-weight: 600;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.sign__error {
+    background-color: $yellow-1;
+    border-radius: 5px;
+    padding: $s2-space;
+}
+
+.sign__btn {
+    height: 50px;
+    background-color: $red-1;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: $m-space;
+    font-size: $s3-size;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.provider-login-wr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $grey-3;
+    font-size: $s4-size;
+    cursor: pointer;
+    img {
+        width: 20px;
+        margin-right: $s3-space;
+    }
+    em {
+        font-style: normal;
+        font-weight: 600;
+        color: white;
+    }
+}
+
+@media (max-width: 550px) {
+    .sign {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    .sign {
+        width: 90vw;
+        padding: 20px;
+    }
+}

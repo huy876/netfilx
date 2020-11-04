@@ -1,0 +1,15 @@
+.footer__links-wr {
+    display: flex;
+    flex-wrap: wrap;
+    margin: $l1-space;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: $grey-3;
+        font-size: $s4-size;
+        width: 22%;
+        box-sizing: border-box;
+        padding: $s3-space;
+    }
+}

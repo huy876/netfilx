@@ -1,0 +1,66 @@
+.page__home {
+    background-color: black;
+    color: white;
+}
+
+.banner-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-wr {
+    padding-top: 150px;
+    h2 {
+        font-size: $l1-size;
+        max-width: 600px;
+        text-align: center;
+    }
+}
+
+.banner__sub-title {
+    font-size: $m-size;
+    text-align: center;
+}
+
+.faq-section {
+    padding: $l1-space 0;
+    border-bottom: 8px solid $grey-1;
+    h3 {
+        margin-top: 0;
+        font-size: $l1-size;
+        text-align: center;
+    }
+}
+
+@media (max-width: 950px) {
+    .banner-wr {
+        max-width: 80vw;
+    }
+    .faq-section {
+        h3 {
+            font-size: $m1-size;
+            margin-left: $l1-space;
+            margin-right: $l1-space;
+            line-height: 1.2em;
+            
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .banner-wr {
+        h2 {
+            font-size: $m0-size;
+        }
+        >p {
+            font-size: $s2-size;
+        }
+    }
+    .faq-section {
+        h3 {
+            font-size: $m-size;
+        }
+    }
+}
