@@ -83,7 +83,7 @@ const Slide = (props) => {
                         <p className="slide__show__genre">{title}</p>
                     </div>
                     <div className="slide__show__play-wr">
-                        <button>PLAY</button>
+                        <button onClick={() => props.setPlay('open')}>PLAY</button>
                         <span onClick={onCloseShow}>Close</span>
                     </div>
                 </div>   

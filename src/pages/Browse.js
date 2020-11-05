@@ -1,13 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import bg from '../fixtures/joker1.jpg'
 import Slide from '../components/silde/Slide'
 import getVisibleItem from '../selectors/video'
 import { connect } from 'react-redux'
+import Player from '../components/Player'
  
 const Browse = (props) => {
-    const style1 = {
-        background: `url(${bg})`
-    }
+    const [play, setPlay] = useState('close')
 
     const renderBrowse = () => {
         const genreListWithDuplicate = props.videos.map(video => video.genre)
@@ -24,8 +23,18 @@ const Browse = (props) => {
                 title={genre}
                 videos={genreObject[genre]}
                 videoType={props.videoType}
+                setPlay={setPlay}
             />
         ))
+    }
+
+    const openPlayer = () => {
+        console.log('Play')
+        setPlay('open')
+    }
+
+    const style1 = {
+        background: `url(${bg})`
     }
 
     return (
@@ -38,11 +47,14 @@ const Browse = (props) => {
                     he walks the streets of Gotham City. Arthur wears two masks -- the one he 
                     paints for his day job as a clown, and ...
                     </p>
-                    <button>Play</button>
+                    <button onClick={openPlayer}>Play</button>
                 </div>
             </div>
             <div className="sildes-section">
                 {renderBrowse()}
+            </div>
+            <div className="video-player__popup">
+                <Player play={play} setPlay={setPlay}/>
             </div>
         </div> 
     )
