@@ -3,7 +3,7 @@ import bg from '../fixtures/joker1.jpg'
 import Slide from '../components/silde/Slide'
 import getVisibleItem from '../selectors/video'
 import { connect } from 'react-redux'
-
+ 
 const Browse = (props) => {
     const style1 = {
         background: `url(${bg})`
@@ -31,7 +31,15 @@ const Browse = (props) => {
     return (
         <div className="page__container">
             <div style={style1} className="page__banner-section">
-                <h1>Hi world!</h1>
+                <div className="page__banner-section__content">
+                    <h1>Watch Joker Now</h1>
+                    <p>
+                    Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as 
+                    he walks the streets of Gotham City. Arthur wears two masks -- the one he 
+                    paints for his day job as a clown, and ...
+                    </p>
+                    <button>Play</button>
+                </div>
             </div>
             <div className="sildes-section">
                 {renderBrowse()}

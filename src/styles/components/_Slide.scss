@@ -78,15 +78,17 @@ ul.slick-dots{
     visibility: hidden;
     opacity: 0;
     max-height: 0;
-    transition: 0.5s ease-in-out;
+    // transition: 0.5s ease-in-out;
     overflow: hidden;
 }
 
 .slide__show-display {
+    transition: 0.5s ease-in-out;
     visibility: visible;
     opacity: 1;
     max-height: 600px;
     margin-top: $m-space;
+    transition: 'none'
 }
 
 .slide__show__bg img {

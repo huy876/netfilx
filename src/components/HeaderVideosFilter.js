@@ -13,15 +13,33 @@ const HeaderVideosFilter = (props) => {
 
     return (
         <div className="header__videos-filter">
-            <span onClick={handleSetFilmsFilter}> Films </span>
+            <span 
+                onClick={handleSetFilmsFilter}
+                style={(
+                    props.videoType === 'films' ?
+                    {color: 'white', fontWeight: '600'} : 
+                    {}
+                )}
+            > Films </span>
             <span>|</span>
-            <span onClick={handleSetSeriesFilter}> Series </span>
+            <span 
+                onClick={handleSetSeriesFilter}
+                style={(
+                    props.videoType === 'series' ?
+                    {color: 'white', fontWeight: '600'} : 
+                    {}
+                )}
+            > Series </span>
         </div>
     )
 }
+
+const mapStateToProps = (state) => ({
+    videoType: state.filters.videoType
+})
 
 const mapDispatchToProps = (dispatch) => ({
     setTypeFilter: (videoType) => dispatch(setTypeFilter(videoType))
 })
 
-export default connect(undefined, mapDispatchToProps)(HeaderVideosFilter)
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderVideosFilter)

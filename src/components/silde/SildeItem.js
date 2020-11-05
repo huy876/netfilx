@@ -11,7 +11,7 @@ const SlideItem = (props) => {
         props.setShowSlug(props.slug)
         props.setSlideShowClass('slide__show slide__show-display')
     }
-
+ 
     return (
         <div className="slide__item" onClick={onClick}>
             <div className="slide__item__hidden">

@@ -1,7 +1,54 @@
 .page__banner-section {
     height: 100vh;
     background-size: cover!important;
+    background-position: center!important;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: flex-start;
+    padding: $l1-space;
 } 
+.page__banner-section__content {
+    width: 40%;
+    max-width: 500px;
+
+    h1 {
+        text-shadow: 2px 2px 8px  black
+    }
+
+    p {
+        line-height: 1.3em;
+        // text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+        text-shadow: 2px 2px 8px  black
+    }
+
+    button {
+        background-color: white;
+        font-weight: 600;
+        padding: 6px $m-space;
+        border: none;
+        border-radius: 3px;
+        margin-top: $s3-space;
+        cursor: pointer;
+        box-shadow: 2px 2px 8px  black;
+    }
+}
+
+@media (max-width: 991px) {
+    .page__banner-section {
+        padding: $m-space;
+    }
+
+    .page__banner-section__content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page__banner-section__content {
+        margin-top: 100px;
+        p {
+            font-size: 14px;
+        }
+    }
+}

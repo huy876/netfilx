@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import SlideItem from './SildeItem'
 import Slider from 'react-slick'
 
@@ -12,6 +12,10 @@ const Slide = (props) => {
     const [showSlug, setShowSlug] = useState('')
 
     const [slideShowClass, setSlideShowClass] = useState('slide__show')
+
+    useEffect(() => {
+        setSlideShowClass('slide__show')
+    }, [props])
 
     const slideSetting = {
         infinite: false,
@@ -69,7 +73,7 @@ const Slide = (props) => {
                     <img 
                         src={`/images/${props.videoType}/${props.title}/${showSlug}/large.jpg`} 
                         alt=""
-                    />
+                    /> 
                 </div>
                 <div className="slide__show__info">
                     <h4 className="slide__show__title">{showTitle}</h4>

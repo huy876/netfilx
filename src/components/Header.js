@@ -4,7 +4,7 @@ import { history } from '../routers/AppRouter'
 import HeaderUser from './HeaderUser'
 import HeaderSearch from './HeaderSearch'
 import HeaderVideosFilter from './HeaderVideosFilter'
-
+ 
 const Header = (props) => {
     const [headerClass, setHeaderClass] = useState('header')
 

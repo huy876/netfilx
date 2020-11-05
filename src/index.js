@@ -7,6 +7,7 @@ import { firebase } from './firebase/firebase'
 import { login, logout } from './store/actions/auth'
 import { startSetFilms } from './store/actions/films'
 import { startSetSeries } from './store/actions/series'
+import Loading from './pages/Loading'
 
 import './firebase/firebase'
 
@@ -28,7 +29,7 @@ const renderApp = () => {
     hasRendered = true   
 }
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('root'))
+ReactDOM.render(<Loading />, document.getElementById('root'))
 
 firebase.auth().onAuthStateChanged(async (user) => {
     if(user) {
