@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { history } from '../routers/AppRouter'
 import HeaderUser from './HeaderUser'
 import HeaderSearch from './HeaderSearch'
+import HeaderVideosFilter from './HeaderVideosFilter'
 
 const Header = (props) => {
     const [headerClass, setHeaderClass] = useState('header')
@@ -28,13 +29,18 @@ const Header = (props) => {
             }
         } else if (props.route === 'private') {
             return (
-                <div className="header__private-wr">
-                    <HeaderSearch />
-                    <HeaderUser />
+                <div className="header__private-cont">
+                    {history.location.pathname === '/browse' && (
+                        <HeaderVideosFilter />
+                    )}
+                    <div className="header__private-wr">
+                        <HeaderSearch />
+                        <HeaderUser />
+                    </div>
                 </div>
             )
         }
-    }
+    } 
 
     return (
         <header className={headerClass}>

@@ -5,13 +5,14 @@ import { Provider } from 'react-redux'
 import store from './store/configStore'
 import { firebase } from './firebase/firebase'
 import { login, logout } from './store/actions/auth'
+import { startSetFilms } from './store/actions/films'
+import { startSetSeries } from './store/actions/series'
 
 import './firebase/firebase'
 
 import './styles/style.scss'
-
-
-
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 let hasRendered = false
 
@@ -33,6 +34,8 @@ firebase.auth().onAuthStateChanged(async (user) => {
     if(user) {
         console.log('Logged in as', user.email, '====', user.displayName)
         await store.dispatch(login(user.uid, user.displayName))
+        await store.dispatch(startSetFilms())
+        await store.dispatch(startSetSeries())
         renderApp()
         if(history.location.pathname === '/sign-up' || history.location.pathname === '/sign-in') {
             history.push('/browse')

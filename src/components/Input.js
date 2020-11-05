@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 
 const Input = (props) => {
-    const [inputClass, setClass] = useState('input-cont')
+    const [inputClass, setClass] = useState(
+        props.value ? 'input-cont input-cont-focused' : 'input-cont'
+    )
 
     const onFocus = () => setClass('input-cont input-cont-focused')
 

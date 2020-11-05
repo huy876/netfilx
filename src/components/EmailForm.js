@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import validator from 'validator'
+import { history } from '../routers/AppRouter'
 
 const EmailForm = (props) => {
     const [className, setClassName] = useState('email-form-cont')
@@ -30,6 +31,11 @@ const EmailForm = (props) => {
             emailInput.current.focus()
             return setError('Please enter an valid email address')
         }
+        history.push({
+            pathname: '/sign-up',
+            state: { email }
+        })
+
     }
 
     return (

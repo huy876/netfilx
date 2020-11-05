@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, Switch } from 'react-router-dom'
+import { Router, Switch } from 'react-router-dom'
 import Home from '../pages/Home'
 import Signin from '../pages/Signin'
 import Signup from '../pages/Signup'
@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 
 import PrivateRoute from './PrivateRoute'
 import PublicRoute from './PublicRoute'
+import BasicRoute from './BasicRoute'
 
 import { createBrowserHistory } from 'history'
 
@@ -23,7 +24,7 @@ const AppRouter = () => {
                     <PublicRoute path="/sign-in" component={Signin} />
                     <PublicRoute path="/sign-up" component={Signup} />
                     <PrivateRoute path="/browse" component={Browse} />
-                    <Route component={NotFound} />
+                    <BasicRoute component={NotFound} />
                 </Switch>
                 <Footer />
             </Router>

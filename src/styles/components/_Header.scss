@@ -38,6 +38,10 @@
     transition: 0.5s ease-in-out;
 }
 
+.header__button-wr {
+    flex-grow: 1;
+}
+
 .header__sign-in-btn {
     padding: 0 $s2-space;
     height: 30px;
@@ -50,10 +54,24 @@
     cursor: pointer;
 }
 
+.header__private-cont {
+    display: flex;
+    justify-content: space-between;
+    margin-left: $m-space;
+}
+
 .header__private-wr {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header__videos-filter {
+    span {
+        font-size: $s4-size;
+        color: $grey-3;
+        cursor: pointer;
+    }
 }
 
 .header__search-wr {

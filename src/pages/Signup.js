@@ -5,10 +5,13 @@ import { connect } from 'react-redux'
 import background from '../fixtures/home-bg.jpg'
 import Input from '../components/Input'
 import { Link } from 'react-router-dom'
+import { history } from '../routers/AppRouter'
 
 const Signup = (props) => {
     const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
+    const [email, setEmail] = useState(
+        history.location.state ? history.location.state.email : ''
+    )
     const [password, setPassword] = useState('')
     const [nameError, setNameError] = useState('')
     const [emailError, setEmailError] = useState('')
