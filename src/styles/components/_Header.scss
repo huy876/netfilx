@@ -40,6 +40,8 @@
 
 .header__button-wr {
     flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .header__sign-in-btn {
@@ -56,6 +58,7 @@
 
 .header__private-cont {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     margin-left: $m-space;
 }
