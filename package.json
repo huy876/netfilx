@@ -2,6 +2,7 @@
   "name": "netflix",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://bluelifego.com",
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "@testing-library/jest-dom": "^5.11.5",

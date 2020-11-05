@@ -15,7 +15,7 @@ const Player = (props) => {
             'video-player-wr'
         }>
             <div className="video-player">
-                <video controls autoPlay={true} ref={videoRef}>
+                <video controls ref={videoRef}>
                     <source src="/videos/bunny.mp4" type="video/mp4"/>
                     Your browser does not support HTML video.
                 </video>
